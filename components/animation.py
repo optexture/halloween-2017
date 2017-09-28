@@ -12,6 +12,7 @@ class PixelTrickler(base.Extension):
 	def __init__(self, comp):
 		super().__init__(comp)
 		self.inpixels = comp.op('./input_pixels')
+		self.nodevals = comp.op('./node_vals')
 		self.currentSize = self._Size
 		self.tracks = []
 
@@ -41,48 +42,38 @@ class PixelTrickler(base.Extension):
 			self._LogEnd('_SetUp()')
 
 	def Step(self):
-		self._LogBegin('Step(cursor: {})'.format(self._Cursor))
-		try:
-			if not self.tracks or self._Size != self.currentSize:
-				self._SetUp()
-				if not self.tracks:
-					return
-			cur = self._Cursor
-			self.tracks[cur].PushColor(
-				self.inpixels['r'][cur],
-				self.inpixels['g'][cur],
-				self.inpixels['b'][cur],
-				self.inpixels['a'][cur],
-			)
-			self._Cursor = (cur + 1) % self._Size[0]
-		finally:
-			self._LogEnd('Step(cursor: {})'.format(self._Cursor))
+		# self._LogBegin('Step() - BEGIN (cursor: {})'.format(self._Cursor))
+		# try:
+		if not self.tracks or self._Size != self.currentSize:
+			self._SetUp()
+			if not self.tracks:
+				return
+		cur = self._Cursor
+		self.tracks[cur].PushColor(
+			self.inpixels['r'][cur],
+			self.inpixels['g'][cur],
+			self.inpixels['b'][cur],
+			self.inpixels['a'][cur],
+		)
+		self._Cursor = (cur + 1) % self._Size[0]
+		# finally:
+		# 	self._LogEnd('Step() - END (cursor: {})'.format(self._Cursor))
 
 	def WriteToCHOP(self, chop):
-		# self._LogBegin('WriteToCHOP({})'.format(chop))
-		# try:
 		chop.clear()
 		if not self.tracks:
-			# self._LogEvent(' -- no tracks!: {}'.format(repr(self.tracks)))
 			return
 		w, h = self._Size
-		# self._LogEvent(' -- size: {}, {}'.format(w, h))
-		chop.numSamples = w * 4
-		rchans, gchans, bchans, achans = [], [], [], []
-		for y in range(h):
-			rchans.append(chop.appendChan('r{}'.format(y)))
-			gchans.append(chop.appendChan('g{}'.format(y)))
-			bchans.append(chop.appendChan('b{}'.format(y)))
-			achans.append(chop.appendChan('a{}'.format(y)))
-		for x in range(w):
+		chop.numSamples = self.nodevals.numSamples
+		for c in 'rgba':
+			chop.appendChan(c)
+		for i in range(self.nodevals.numSamples):
+			u = self.nodevals['u'][i]
+			v = self.nodevals['v'][i]
+			x = round(u * (w - 1))
+			y = round((1 - v) * (h - 1))
 			track = self.tracks[x]
-			for y in range(h):
-				rchans[y][x] = track.r[y]
-				gchans[y][x] = track.g[y]
-				bchans[y][x] = track.b[y]
-				achans[y][x] = track.a[y]
-		# finally:
-		# 	self._LogEnd('WriteToCHOP()')
+			chop['r'][i], chop['g'][i], chop['b'][i], chop['a'][i] = track.GetPixel(y)
 
 	def WriteToDebugDAT(self, dat):
 		dat.clear()
