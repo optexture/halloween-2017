@@ -19,7 +19,9 @@
 		<ParamRange name="Link 1" altName="R delay" default="0" value="0"/>
 	</Params>
 	<CompositionView name="CompositionObjectView">
-		<FoldParams name="FoldParams"/>
+		<FoldParams name="FoldParams">
+			<FoldState component="/groupedcomponent/renderpasschaincomponent/suckr/" folded="1"/>
+		</FoldParams>
 	</CompositionView>
 	<AudioTrack name="AudioTrack">
 		<AudioEffectChain name="AudioEffectChain"/>
@@ -109,7 +111,7 @@
 						<ParamRange name="Frequency V" default="0.20000000298023223877" value="0.19799483449835525439"/>
 						<ParamRange name="Amplitude V" default="0.5" value="0.37092716532542291397"/>
 						<ParamRange name="Amplitude Both" default="1" value="0.41353383458646614246"/>
-						<ParamRange name="Phase" default="0" value="0.94445043688556151729">
+						<ParamRange name="Phase" default="0" value="0.87513428927959147074">
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="0">
 									<Params name="Params">
@@ -128,6 +130,10 @@
 				</ChoosableMixer>
 			</RenderPass>
 			<RenderPass storage="0" name="Suckr" type="DryWetEffect" uniqueId="A126" baseType="DryWetEffect" index="4">
+				<Params name="Params">
+					<Param name="Bypassed" default="0" value="1"/>
+				</Params>
+				<View name="View" folded="1"/>
 				<RenderPass name="Suckr" type="Suckr" uniqueId="A126" baseType="Effect" dwType="Effect">
 					<Params name="Params">
 						<ParamRange name="Suck" default="0.5" value="0">
@@ -19791,7 +19797,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="1400.9445375308901021">
+					<ParamRange name="Position" default="0" value="3001.0854399202407876">
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
@@ -19852,7 +19858,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="780.69052118376498584">
+					<ParamRange name="Position" default="0" value="2380.8314235730581458">
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
