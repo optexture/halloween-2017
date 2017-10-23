@@ -3,11 +3,10 @@ import random
 import copy
 
 class _Converter:
-	def __init__(self, templatexml, panels):
+	def __init__(self, templatexml):
 		self.root = ET.fromstring(templatexml)
 		self.doc = self.root.find('XmlState')
 		self.slicetemplate = self.root.find('Slice')
-		self.panels = panels
 		self.usedids = self._GatherUsedIds()
 		self.screenselem = self.doc.find('./ScreenSetup/screens')
 		self.width = 1920
@@ -38,9 +37,9 @@ class _Converter:
 
 	def _CreateSlice(self, panel):
 		sliceelem = copy.deepcopy(self.slicetemplate)
-		sliceelem.find('./Params[@name="Common"]/Param[@name="Name"]').set('value', str(panel.index))
+		sliceelem.find('./Params[@name="Common"]/Param[@name="Name"]').set('value', 'Panel ' + str(panel.index))
 		verts = [
-			[v.uv[0] * self.width, v.uv[1] * self.height]
+			[v.uv[0] * self.width, (1 - v.uv[1]) * self.height]
 			for v in panel
 		]
 		left = min([v[0] for v in verts])
@@ -56,26 +55,37 @@ class _Converter:
 		]
 		_replaceVertElems(sliceelem.find('./InputRect'), rectverts)
 		_replaceVertElems(sliceelem.find('./OutputRect'), rectverts)
-		_replaceVertElems(sliceelem.find('./SliceMask/ShapeObject/Rect'), rectverts)
+		shapeobj = sliceelem.find('.//ShapeObject')
+		_replaceVertElems(shapeobj.find('Rect'), rectverts)
 
-		_replaceVertElems(sliceelem.find('./SliceMask/ShapeObject/Shape/Countour/points'), verts)
+		_replaceVertElems(shapeobj.find('.//Contour/points'), verts)
+		shapeobj.find('.//Contour/segments').text = 'L' * len(verts)
 
 		self._AddNewIds(sliceelem)
 		return sliceelem
 
-	def Generate(self):
-		pass
+	def _RebuildScreenSlices(self, screenelem, panels):
+		layerselem = screenelem.find('layers')
+		layerselem.clear()
+		for panel in panels:
+			sliceelem = self._CreateSlice(panel)
+			layerselem.append(sliceelem)
+
+	def Generate(self, panels):
+		for screen in self.doc.findall('.//ScreenSetup/screens/Screen'):
+			if screen.attrib['name'].startswith('Projector'):
+				self._RebuildScreenSlices(screen, panels)
 
 	def GetXml(self):
-		return self.doc.tostring()
+		return ET.tostring(self.doc, encoding='unicode')
 
 def _replaceVertElems(parent, verts):
 	for elem in list(parent):
 		parent.remove(elem)
 	for x, y in verts:
-		parent.SubElement('v', {'x': x, 'y': y})
+		ET.SubElement(parent, 'v', {'x': str(x), 'y': str(y)})
 
 def Convert(templatexml, panels):
-	conv = _Converter(templatexml, panels)
-	conv.Generate()
+	conv = _Converter(templatexml)
+	conv.Generate(panels)
 	return conv.GetXml()
