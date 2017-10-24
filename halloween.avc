@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Composition name="Composition" uniqueId="1505875345492" numDecks="5" currentDeckIndex="4" numLayers="4" numColumns="8" compositionIsRelative="0">
+<Composition name="Composition" uniqueId="1505875345492" numDecks="5" currentDeckIndex="2" numLayers="4" numColumns="36" compositionIsRelative="0">
 	<versionInfo name="Resolume Arena" majorVersion="6" minorVersion="0" microVersion="0" revision="60446"/>
 	<CompositionInfo name="halloween" description="" width="1920" height="1080">
 		<DeckInfo name="proc" id="1508115137878" closed="0"/>
@@ -109,7 +109,7 @@
 						<ParamRange name="Frequency V" default="0.20000000298023223877" value="0.19799483449835525439"/>
 						<ParamRange name="Amplitude V" default="0.5" value="0.37092716532542291397"/>
 						<ParamRange name="Amplitude Both" default="1" value="0.41353383458646614246"/>
-						<ParamRange name="Phase" default="0" value="0.047210330186316831758">
+						<ParamRange name="Phase" default="0" value="0.024551230873407541011">
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="0">
 									<Params name="Params">
@@ -404,7 +404,11 @@
 				<Params name="Params">
 					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
 				</Params>
-				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
+					<Params name="Params">
+						<ParamRange name="Opacity" default="1" value="0.9290778040885925293"/>
+					</Params>
+				</RenderPass>
 			</ChoosableMixer>
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
@@ -511,7 +515,7 @@
 							</ParamRange>
 							<ParamRange name="MaxDistortionX" default="0.14000000059604644775" value="0.082677165354330714453"/>
 							<ParamRange name="MaxDistortionY" default="0.14000000059604644775" value="0.085301917368971455491"/>
-							<ParamRange name="MaxDistortionZ" default="0" value="0">
+							<ParamRange name="MaxDistortionZ" default="0" value="0.0034166799552501920384">
 								<ValueRange name="startStop" min="0" max="0.22073578595317724926"/>
 								<BehaviourDouble name="BehaviourDouble">
 									<PhaseSourceFFT name="PhaseSourceFFT" pathToLink="/audioengine/externalfft">
@@ -611,6 +615,34 @@
 	<Column uniqueId="1505875345614" columnIndex="5"/>
 	<Column uniqueId="1505875345615" columnIndex="6"/>
 	<Column uniqueId="1505875345616" columnIndex="7"/>
+	<Column uniqueId="1508809453772" columnIndex="8"/>
+	<Column uniqueId="1508809453782" columnIndex="9"/>
+	<Column uniqueId="1508809453792" columnIndex="10"/>
+	<Column uniqueId="1508809453802" columnIndex="11"/>
+	<Column uniqueId="1508809453812" columnIndex="12"/>
+	<Column uniqueId="1508809453822" columnIndex="13"/>
+	<Column uniqueId="1508809453832" columnIndex="14"/>
+	<Column uniqueId="1508809453842" columnIndex="15"/>
+	<Column uniqueId="1508809453852" columnIndex="16"/>
+	<Column uniqueId="1508809453862" columnIndex="17"/>
+	<Column uniqueId="1508809453872" columnIndex="18"/>
+	<Column uniqueId="1508809453882" columnIndex="19"/>
+	<Column uniqueId="1508809453892" columnIndex="20"/>
+	<Column uniqueId="1508809453902" columnIndex="21"/>
+	<Column uniqueId="1508809453912" columnIndex="22"/>
+	<Column uniqueId="1508809453922" columnIndex="23"/>
+	<Column uniqueId="1508809453932" columnIndex="24"/>
+	<Column uniqueId="1508809453942" columnIndex="25"/>
+	<Column uniqueId="1508809453952" columnIndex="26"/>
+	<Column uniqueId="1508809453962" columnIndex="27"/>
+	<Column uniqueId="1508809453972" columnIndex="28"/>
+	<Column uniqueId="1508809453982" columnIndex="29"/>
+	<Column uniqueId="1508809453992" columnIndex="30"/>
+	<Column uniqueId="1508809454002" columnIndex="31"/>
+	<Column uniqueId="1508809454012" columnIndex="32"/>
+	<Column uniqueId="1508809454022" columnIndex="33"/>
+	<Column uniqueId="1508809454032" columnIndex="34"/>
+	<Column uniqueId="1508809454042" columnIndex="35"/>
 	<CrossFader name="CrossFader">
 		<Params name="Params">
 			<ParamRange name="Phase" default="0" value="0.070312502793967723846"/>
@@ -14284,7 +14316,7 @@
 			</VideoTrack>
 		</Clip>
 	</Deck>
-	<Deck name="Deck" uniqueId="1505875345568" numLayers="4" numColumns="36" closed="0" deckIndex="2">
+	<Deck name="Deck" uniqueId="1505875345568" closed="0" numLayers="4" numColumns="36" deckIndex="2">
 		<Params name="Params">
 			<Param name="Name" default="empty" value="newproc"/>
 		</Params>
@@ -17029,68 +17061,6 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1508209567908" layerIndex="0" columnIndex="19">
-			<PreloadData>
-				<VideoFile value="C:\Users\tekt\Documents\Resolume Arena 6\Recorded\Untitled 2017-10-16 at 20.12.25.png"/>
-			</PreloadData>
-			<Params name="Params">
-				<Param storage="3" name="Name" default="Untitled 2017-10-16 at 20.12.25" value="Untitled 2017-10-16 at 20.12.25"/>
-				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
-			</Params>
-			<Transport name="Transport">
-				<Params name="Params">
-					<ParamRange name="Position" default="0" value="0">
-						<ValueRange name="minMax" min="0" max="1000"/>
-						<ValueRange name="startStop" min="0" max="1000"/>
-						<BehaviourDouble name="BehaviourDouble">
-							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
-								<Params name="Params">
-									<ParamRange storage="3" name="Beats" default="2" value="2"/>
-									<ParamRange storage="3" name="BPM" default="120" value="120"/>
-									<ParamRange storage="3" name="Speed" default="1" value="1"/>
-									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
-									<Param storage="3" name="Finished" default="0" value="0"/>
-								</Params>
-								<ParamBasedDuration name="ParamBasedDuration"/>
-								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="2" detectedTempo="-1" manualTempo="120" detected="0"/>
-							</PhaseSourceTimeline>
-						</BehaviourDouble>
-					</ParamRange>
-				</Params>
-			</Transport>
-			<ClipView name="ClipView">
-				<FoldParams name="FoldParams"/>
-			</ClipView>
-			<VideoTrack name="VideoTrack" manualDuration="0">
-				<Params name="Params">
-					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
-					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
-					<Param storage="3" name="RScale" default="1" value="1"/>
-					<Param storage="3" name="GScale" default="1" value="1"/>
-					<Param storage="3" name="BScale" default="1" value="1"/>
-					<Param storage="3" name="AScale" default="1" value="1"/>
-				</Params>
-				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
-					<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
-						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
-					</RenderPass>
-				</RenderPass>
-				<ChoosableMixer name="Blend"/>
-				<PrimarySource>
-					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
-						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
-						<VideoFormatReaderSource fileName="C:\Users\tekt\Documents\Resolume Arena 6\Recorded\Untitled 2017-10-16 at 20.12.25.png" LoadingThread="TTM_MESSAGE">
-							<Params name="Settings">
-								<ParamChoice name="Alpha Type" default="2" value="1" storeChoices="0"/>
-							</Params>
-						</VideoFormatReaderSource>
-					</VideoSource>
-				</PrimarySource>
-			</VideoTrack>
-		</Clip>
 		<Clip name="Clip" uniqueId="1507872344384" layerIndex="3" columnIndex="19">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-01-6-mjpeg-3840x2160_DXV3-1920x1080.mov"/>
@@ -17166,7 +17136,7 @@
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
 									<ParamRange storage="3" name="Beats" default="64" value="64"/>
-									<ParamRange storage="3" name="BPM" default="500" value="500"/>
+									<ParamRange storage="3" name="BPM" default="1376.5859487576001357" value="500"/>
 									<ParamRange storage="3" name="Speed" default="1" value="1"/>
 									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
 									<ParamChoice storage="3" name="PlayDirection" default="1" value="0" storeChoices="0"/>
@@ -19776,7 +19746,7 @@
 			</VideoTrack>
 		</Clip>
 	</Deck>
-	<Deck name="Deck" uniqueId="1508730066918" closed="0" numLayers="4" numColumns="8" deckIndex="4">
+	<Deck name="Deck" uniqueId="1508730066918" numLayers="4" numColumns="8" closed="0" deckIndex="4">
 		<Params name="Params">
 			<Param name="Name" default="empty" value="MAP"/>
 		</Params>
@@ -19787,7 +19757,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="3001.0854399202407876">
+					<ParamRange name="Position" default="0" value="4784.1598329300240948">
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
@@ -19848,7 +19818,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="600.18683610065488665">
+					<ParamRange name="Position" default="0" value="2650.5448118458702993">
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
