@@ -19,9 +19,7 @@
 		<ParamRange name="Link 1" altName="R delay" default="0" value="0"/>
 	</Params>
 	<CompositionView name="CompositionObjectView">
-		<FoldParams name="FoldParams">
-			<FoldState component="/groupedcomponent/renderpasschaincomponent/suckr/" folded="1"/>
-		</FoldParams>
+		<FoldParams name="FoldParams"/>
 	</CompositionView>
 	<AudioTrack name="AudioTrack">
 		<AudioEffectChain name="AudioEffectChain"/>
@@ -111,7 +109,7 @@
 						<ParamRange name="Frequency V" default="0.20000000298023223877" value="0.19799483449835525439"/>
 						<ParamRange name="Amplitude V" default="0.5" value="0.37092716532542291397"/>
 						<ParamRange name="Amplitude Both" default="1" value="0.41353383458646614246"/>
-						<ParamRange name="Phase" default="0" value="0.87513428927959147074">
+						<ParamRange name="Phase" default="0" value="0.047210330186316831758">
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="0">
 									<Params name="Params">
@@ -406,11 +404,7 @@
 				<Params name="Params">
 					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
 				</Params>
-				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
-					<Params name="Params">
-						<ParamRange name="Opacity" default="1" value="0.9290778040885925293"/>
-					</Params>
-				</RenderPass>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
 			</ChoosableMixer>
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
@@ -496,11 +490,7 @@
 						</Params>
 					</RenderPass>
 					<ChoosableMixer name="Mixer">
-						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
-							<Params name="Params">
-								<ParamRange name="Opacity" default="1" value="0.18766412209338090289"/>
-							</Params>
-						</RenderPass>
+						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Goo" type="DryWetEffect" uniqueId="sy06" baseType="DryWetEffect" index="3">
@@ -19858,7 +19848,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="2380.8314235730581458">
+					<ParamRange name="Position" default="0" value="600.18683610065488665">
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
