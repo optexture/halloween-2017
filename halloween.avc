@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Composition name="Composition" uniqueId="1505875345492" numDecks="5" currentDeckIndex="2" numLayers="4" numColumns="40" compositionIsRelative="0">
+<Composition name="Composition" uniqueId="1505875345492" numDecks="5" currentDeckIndex="2" numLayers="4" numColumns="46" compositionIsRelative="0">
 	<versionInfo name="Resolume Arena" majorVersion="6" minorVersion="0" microVersion="0" revision="60446"/>
 	<CompositionInfo name="halloween" description="" width="1920" height="1080">
 		<DeckInfo name="proc" id="1508115137878" closed="0"/>
@@ -19,10 +19,7 @@
 		<ParamRange name="Link 1" altName="R delay" default="0" value="0"/>
 	</Params>
 	<CompositionView name="CompositionObjectView">
-		<FoldParams name="FoldParams">
-			<FoldState component="/groupedcomponent/common/" folded="1"/>
-			<FoldState component="/groupedcomponent/video/" folded="1"/>
-		</FoldParams>
+		<FoldParams name="FoldParams"/>
 	</CompositionView>
 	<AudioTrack name="AudioTrack">
 		<AudioEffectChain name="AudioEffectChain"/>
@@ -76,7 +73,7 @@
 						<ParamRange name="Frequency V" default="0.20000000298023223877" value="0.19799483449835525439"/>
 						<ParamRange name="Amplitude V" default="0.5" value="0.37092716532542291397"/>
 						<ParamRange name="Amplitude Both" default="1" value="0.41353383458646614246"/>
-						<ParamRange name="Phase" default="0" value="0.36228489823060416875">
+						<ParamRange name="Phase" default="0" value="0.52820652109651677897">
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="0">
 									<Params name="Params">
@@ -290,9 +287,6 @@
 			<FoldParams name="FoldParams">
 				<FoldState component="/groupedcomponent/groupedcomponent/audio/" folded="1"/>
 				<FoldState component="/groupedcomponent/groupedcomponent/audioeffects/" folded="0"/>
-				<FoldState component="/groupedcomponent/renderpasschaincomponent/dropshadow/" folded="1"/>
-				<FoldState component="/groupedcomponent/renderpasschaincomponent/dropshadow/color/paramcolorcomponent/" folded="1"/>
-				<FoldState component="/groupedcomponent/renderpasschaincomponent/dropshadow/mixerparamscomponent/" folded="0"/>
 			</FoldParams>
 		</LayerGroupView>
 		<AudioTrack name="AudioTrack">
@@ -373,11 +367,7 @@
 						<Params name="Params">
 							<ParamChoice name="Blend Mode" default="67464115" value="67464114" storeChoices="0"/>
 						</Params>
-						<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
-							<Params name="Params">
-								<ParamRange name="Opacity" default="1" value="0.0078740157480314959537"/>
-							</Params>
-						</RenderPass>
+						<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Edge Detection" type="DryWetEffect" uniqueId="MEDG" baseType="DryWetEffect" index="2">
@@ -395,11 +385,7 @@
 						<Params name="Params">
 							<ParamChoice name="Blend Mode" default="67464115" value="67464211" storeChoices="0"/>
 						</Params>
-						<RenderPass name="Difference" type="Difference" uniqueId="A011" baseType="Mixer">
-							<Params name="Params">
-								<ParamRange name="Opacity" default="1" value="0.5"/>
-							</Params>
-						</RenderPass>
+						<RenderPass name="Difference" type="Difference" uniqueId="A011" baseType="Mixer"/>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Mirror" type="DryWetEffect" uniqueId="A108" baseType="DryWetEffect" index="3">
@@ -429,7 +415,7 @@
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
 					<Params name="Params">
-						<ParamRange name="Opacity" default="1" value="0.99925398826599121094"/>
+						<ParamRange name="Opacity" default="1" value="0.99899679422378540039"/>
 					</Params>
 				</RenderPass>
 			</ChoosableMixer>
@@ -437,7 +423,7 @@
 	</Layer>
 	<Layer uniqueId="1505875345620" layerIndex="1" layerGroup="0">
 		<Params name="Params">
-			<Param name="Name" default="Layer #" value="MASKABLE LAYER"/>
+			<Param name="Name" default="Layer #" value="MIDDLE LAYER"/>
 		</Params>
 		<ClipTransition name="ClipTransition">
 			<Params name="Params">
@@ -479,11 +465,7 @@
 						<Params name="Params">
 							<ParamChoice name="Blend Mode" default="67464115" value="67464114" storeChoices="0"/>
 						</Params>
-						<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
-							<Params name="Params">
-								<ParamRange name="Opacity" default="1" value="0.0078740157480314959537"/>
-							</Params>
-						</RenderPass>
+						<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Edge Detection" type="DryWetEffect" uniqueId="MEDG" baseType="DryWetEffect" index="2">
@@ -501,11 +483,7 @@
 						<Params name="Params">
 							<ParamChoice name="Blend Mode" default="67464115" value="67464211" storeChoices="0"/>
 						</Params>
-						<RenderPass name="Difference" type="Difference" uniqueId="A011" baseType="Mixer">
-							<Params name="Params">
-								<ParamRange name="Opacity" default="1" value="0.49916268353486181741"/>
-							</Params>
-						</RenderPass>
+						<RenderPass name="Difference" type="Difference" uniqueId="A011" baseType="Mixer"/>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Mirror" type="DryWetEffect" uniqueId="A108" baseType="DryWetEffect" index="3">
@@ -535,7 +513,7 @@
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
 					<Params name="Params">
-						<ParamRange name="Opacity" default="1" value="0.99488949775695800781"/>
+						<ParamRange name="Opacity" default="1" value="0.99365508556365966797"/>
 					</Params>
 				</RenderPass>
 			</ChoosableMixer>
@@ -551,7 +529,6 @@
 		<LayerView name="LayerView">
 			<FoldParams name="FoldParams">
 				<FoldState component="/groupedcomponent/renderpasschaincomponent/goo/speed/parambasecomponent/parambasecomponent/" folded="0"/>
-				<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
 			</FoldParams>
 		</LayerView>
 		<AudioTrack name="AudioTrack">
@@ -593,11 +570,7 @@
 						</Params>
 					</RenderPass>
 					<ChoosableMixer name="Mixer">
-						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
-							<Params name="Params">
-								<ParamRange name="Opacity" default="1" value="0.18766412209338090289"/>
-							</Params>
-						</RenderPass>
+						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Goo" type="DryWetEffect" uniqueId="sy06" baseType="DryWetEffect" index="3">
@@ -651,11 +624,7 @@
 						</Params>
 					</RenderPass>
 					<ChoosableMixer name="Mixer">
-						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
-							<Params name="Params">
-								<ParamRange name="Opacity" default="1" value="0.60598503740648379523"/>
-							</Params>
-						</RenderPass>
+						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Trails" type="DryWetEffect" uniqueId="A111" baseType="DryWetEffect" index="5">
@@ -676,11 +645,7 @@
 				<Params name="Params">
 					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
 				</Params>
-				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
-					<Params name="Params">
-						<ParamRange name="Opacity" default="1" value="0.4468085169792175293"/>
-					</Params>
-				</RenderPass>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
 			</ChoosableMixer>
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
@@ -693,7 +658,7 @@
 		</Params>
 		<ClipTransition name="ClipTransition">
 			<Params name="Params">
-				<ParamRange name="Duration" default="0" value="8.7668353182643485866"/>
+				<ParamRange name="Duration" default="0" value="10"/>
 			</Params>
 		</ClipTransition>
 		<LayerView name="LayerView">
@@ -743,11 +708,7 @@
 						<Params name="Params">
 							<ParamChoice name="Blend Mode" default="67464115" value="67464519" storeChoices="0"/>
 						</Params>
-						<RenderPass name="DisplaceMixer" type="DisplaceMixer" uniqueId="A046" baseType="Mixer">
-							<Params name="Params">
-								<ParamRange name="Opacity" default="1" value="0.86184729150978911516"/>
-							</Params>
-						</RenderPass>
+						<RenderPass name="DisplaceMixer" type="DisplaceMixer" uniqueId="A046" baseType="Mixer"/>
 					</ChoosableMixer>
 				</RenderPass>
 			</RenderPass>
@@ -760,7 +721,7 @@
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
 					<Params name="Params">
-						<ParamRange name="Opacity" default="1" value="0.99814152717590332031"/>
+						<ParamRange name="Opacity" default="1" value="0.31792595982551574707"/>
 					</Params>
 				</RenderPass>
 			</ChoosableMixer>
@@ -775,37 +736,43 @@
 	<Column uniqueId="1505875345615" columnIndex="6"/>
 	<Column uniqueId="1505875345616" columnIndex="7"/>
 	<Column uniqueId="1508815534902" columnIndex="8"/>
-	<Column uniqueId="1508900797627" columnIndex="9"/>
-	<Column uniqueId="1508900797638" columnIndex="10"/>
-	<Column uniqueId="1508815534908" columnIndex="11"/>
-	<Column uniqueId="1508815534914" columnIndex="12"/>
-	<Column uniqueId="1508815534920" columnIndex="13"/>
-	<Column uniqueId="1508815534926" columnIndex="14"/>
-	<Column uniqueId="1508815534932" columnIndex="15"/>
-	<Column uniqueId="1508815534938" columnIndex="16"/>
-	<Column uniqueId="1508815534944" columnIndex="17"/>
-	<Column uniqueId="1508815534950" columnIndex="18"/>
-	<Column uniqueId="1508900797607" columnIndex="19"/>
-	<Column uniqueId="1508815534956" columnIndex="20"/>
-	<Column uniqueId="1508815534962" columnIndex="21"/>
-	<Column uniqueId="1508815534968" columnIndex="22"/>
-	<Column uniqueId="1508815534974" columnIndex="23"/>
-	<Column uniqueId="1508815534980" columnIndex="24"/>
-	<Column uniqueId="1508815534986" columnIndex="25"/>
-	<Column uniqueId="1508815534992" columnIndex="26"/>
-	<Column uniqueId="1508815534998" columnIndex="27"/>
-	<Column uniqueId="1508815535004" columnIndex="28"/>
-	<Column uniqueId="1508815535010" columnIndex="29"/>
-	<Column uniqueId="1508815535016" columnIndex="30"/>
-	<Column uniqueId="1508815535022" columnIndex="31"/>
-	<Column uniqueId="1508815535028" columnIndex="32"/>
-	<Column uniqueId="1508815535034" columnIndex="33"/>
-	<Column uniqueId="1508815535040" columnIndex="34"/>
-	<Column uniqueId="1508815535046" columnIndex="35"/>
-	<Column uniqueId="1508815535052" columnIndex="36"/>
-	<Column uniqueId="1508815535058" columnIndex="37"/>
-	<Column uniqueId="1508815535064" columnIndex="38"/>
-	<Column uniqueId="1508900797591" columnIndex="39"/>
+	<Column uniqueId="1509069212515" columnIndex="9"/>
+	<Column uniqueId="1509069212562" columnIndex="10"/>
+	<Column uniqueId="1509069212568" columnIndex="11"/>
+	<Column uniqueId="1509069212574" columnIndex="12"/>
+	<Column uniqueId="1509069212580" columnIndex="13"/>
+	<Column uniqueId="1509069212586" columnIndex="14"/>
+	<Column uniqueId="1509069212592" columnIndex="15"/>
+	<Column uniqueId="1509069212598" columnIndex="16"/>
+	<Column uniqueId="1509069212604" columnIndex="17"/>
+	<Column uniqueId="1509069212610" columnIndex="18"/>
+	<Column uniqueId="1509069212616" columnIndex="19"/>
+	<Column uniqueId="1509069212622" columnIndex="20"/>
+	<Column uniqueId="1509069212628" columnIndex="21"/>
+	<Column uniqueId="1509069212634" columnIndex="22"/>
+	<Column uniqueId="1509069212640" columnIndex="23"/>
+	<Column uniqueId="1509069212646" columnIndex="24"/>
+	<Column uniqueId="1509069212652" columnIndex="25"/>
+	<Column uniqueId="1509069212658" columnIndex="26"/>
+	<Column uniqueId="1509069212664" columnIndex="27"/>
+	<Column uniqueId="1509069212670" columnIndex="28"/>
+	<Column uniqueId="1509069212744" columnIndex="29"/>
+	<Column uniqueId="1509069212813" columnIndex="30"/>
+	<Column uniqueId="1509069212801" columnIndex="31"/>
+	<Column uniqueId="1509069212676" columnIndex="32"/>
+	<Column uniqueId="1509069212682" columnIndex="33"/>
+	<Column uniqueId="1509069212688" columnIndex="34"/>
+	<Column uniqueId="1509069212694" columnIndex="35"/>
+	<Column uniqueId="1509069212700" columnIndex="36"/>
+	<Column uniqueId="1509069212706" columnIndex="37"/>
+	<Column uniqueId="1509069212712" columnIndex="38"/>
+	<Column uniqueId="1509069212718" columnIndex="39"/>
+	<Column uniqueId="1509069212724" columnIndex="40"/>
+	<Column uniqueId="1509069212730" columnIndex="41"/>
+	<Column uniqueId="1509069212736" columnIndex="42"/>
+	<Column uniqueId="1509069212770" columnIndex="43"/>
+	<Column uniqueId="1509069212791" columnIndex="44"/>
+	<Column uniqueId="1509069212837" columnIndex="45"/>
 	<CrossFader name="CrossFader">
 		<Params name="Params">
 			<ParamRange name="Phase" default="0" value="0.070312502793967723846"/>
@@ -917,13 +884,13 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="84.122178990382309394">
+						<ParamRange name="Position" default="0" value="3685.9394141793727613">
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 									<Params name="Params">
 										<ParamRange storage="3" name="Beats" default="8" value="8"/>
 										<ParamRange storage="3" name="BPM" default="96" value="96"/>
-										<ParamRange storage="3" name="Speed" default="1" value="1"/>
+										<ParamRange storage="3" name="Speed" default="1" value="1.1811023622047243098"/>
 										<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
 										<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
 										<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
@@ -1025,7 +992,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="3023.0505308853457791">
+						<ParamRange name="Position" default="0" value="984.27926057843615126">
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 									<Params name="Params">
@@ -1090,7 +1057,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="1064.0356890306973128">
+						<ParamRange name="Position" default="0" value="4648.2806017258380962">
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 									<Params name="Params">
@@ -14558,7 +14525,7 @@
 			</VideoTrack>
 		</Clip>
 	</Deck>
-	<Deck name="Deck" uniqueId="1505875345568" closed="0" numLayers="4" numColumns="40" deckIndex="2">
+	<Deck name="Deck" uniqueId="1505875345568" closed="0" numLayers="4" numColumns="46" deckIndex="2">
 		<Params name="Params">
 			<Param name="Name" default="empty" value="newproc"/>
 		</Params>
@@ -14572,7 +14539,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="1837.2480850471151825">
+					<ParamRange name="Position" default="0" value="493.44830219350706102">
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
@@ -14628,61 +14595,6 @@
 								</ParamColor>
 							</Params>
 						</RenderPass>
-					</VideoSource>
-				</PrimarySource>
-			</VideoTrack>
-		</Clip>
-		<Clip name="Clip" uniqueId="1507784782710" layerIndex="1" columnIndex="1">
-			<Params name="Params">
-				<Param storage="3" name="Name" default="Video Router" value="Video Router"/>
-				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
-			</Params>
-			<Transport name="Transport">
-				<Params name="Params">
-					<ParamRange name="Position" default="0" value="3676.2469089858072948">
-						<BehaviourDouble name="BehaviourDouble">
-							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
-								<Params name="Params">
-									<ParamRange storage="3" name="Beats" default="8" value="8"/>
-									<ParamRange storage="3" name="BPM" default="96" value="96"/>
-									<ParamRange storage="3" name="Speed" default="1" value="1"/>
-									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
-									<Param storage="3" name="Finished" default="0" value="0"/>
-								</Params>
-								<ParamBasedDuration name="ParamBasedDuration"/>
-								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="96" detected="0"/>
-							</PhaseSourceTimeline>
-						</BehaviourDouble>
-					</ParamRange>
-				</Params>
-			</Transport>
-			<ClipView name="ClipView">
-				<FoldParams name="FoldParams">
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/" folded="0"/>
-				</FoldParams>
-			</ClipView>
-			<VideoTrack name="VideoTrack" manualDuration="0">
-				<Params name="Params">
-					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
-					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
-					<Param storage="3" name="RScale" default="1" value="1"/>
-					<Param storage="3" name="GScale" default="1" value="1"/>
-					<Param storage="3" name="BScale" default="1" value="1"/>
-					<Param storage="3" name="AScale" default="1" value="1"/>
-				</Params>
-				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
-					<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
-						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
-					</RenderPass>
-				</RenderPass>
-				<ChoosableMixer name="Blend"/>
-				<PrimarySource>
-					<VideoSource storage="0" name="VideoSource" width="1920" height="1080" type="CompositionRouterVideoSource">
-						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
 					</VideoSource>
 				</PrimarySource>
 			</VideoTrack>
@@ -18021,7 +17933,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="8250.4557531094178557">
+					<ParamRange name="Position" default="0" value="1754.3567539668315476">
 						<ValueRange name="minMax" min="0" max="35000"/>
 						<ValueRange name="startStop" min="0" max="35000"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -18228,7 +18140,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="41399.327173534489702">
+					<ParamRange name="Position" default="0" value="42948.406173373725323">
 						<ValueRange name="minMax" min="0" max="44766.666666666664241"/>
 						<ValueRange name="startStop" min="2501.6666666666665151" max="44766.666666666664241"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -18587,7 +18499,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="23021.431118890304788">
+					<ParamRange name="Position" default="0" value="20819.921274885760795">
 						<ValueRange name="minMax" min="0" max="48233.333333333335759"/>
 						<ValueRange name="startStop" min="0" max="48233.333333333335759"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -19075,7 +18987,384 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429517" layerIndex="0" columnIndex="29">
+		<Clip name="Clip" uniqueId="1509069212838" layerIndex="0" columnIndex="30">
+			<PreloadData>
+				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-25-2-hapq-3840x2160_DXV3-1920x1080.mov"/>
+				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-25-2-hapq-3840x2160_DXV3-1920x1080.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="vjzual3-output-2017-10-25-2-hapq-3840x2160_DXV3-1920x1080" value="vjzual3-output-2017-10-25-2-hapq-3840x2160_DXV3-1920x1080"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="5423.7980834595955457">
+						<ValueRange name="minMax" min="0" max="20900"/>
+						<ValueRange name="startStop" min="0" max="20900"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="96" value="96"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1.8110236220472442081"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="96" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<Params name="Params">
+					<ParamRange name="Volume" default="0" value="0">
+						<ValueRange name="minMax" min="-48" max="12"/>
+						<ValueRange name="startStop" min="-48" max="12"/>
+					</ParamRange>
+				</Params>
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-10-25-2-hapq-3840x2160_DXV3-1920x1080.mov"/>
+				</PrimarySource>
+			</AudioTrack>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="S:\output\_vj\newproc\vjzual3-output-2017-10-25-2-hapq-3840x2160_DXV3-1920x1080.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1509069212817" layerIndex="1" columnIndex="30">
+			<PreloadData>
+				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-40-hapq-3840x2160_DXV3-1920x1080.mov"/>
+				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-40-hapq-3840x2160_DXV3-1920x1080.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="vjzual3-output-2017-10-17-40-hapq-3840x2160_DXV3-1920x1080" value="vjzual3-output-2017-10-17-40-hapq-3840x2160_DXV3-1920x1080"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="3549.3333333297246099">
+						<ValueRange name="minMax" min="0" max="47500"/>
+						<ValueRange name="startStop" min="0" max="47500"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="96" value="96"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="96" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<Params name="Params">
+					<ParamRange name="Volume" default="0" value="0">
+						<ValueRange name="minMax" min="-48" max="12"/>
+						<ValueRange name="startStop" min="-48" max="12"/>
+					</ParamRange>
+				</Params>
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-40-hapq-3840x2160_DXV3-1920x1080.mov"/>
+				</PrimarySource>
+			</AudioTrack>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-40-hapq-3840x2160_DXV3-1920x1080.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1509069212815" layerIndex="0" columnIndex="31">
+			<PreloadData>
+				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-30-hapq-3840x2160_DXV3-1920x1080.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="vjzual3-output-2017-10-17-30-hapq-3840x2160_DXV3-1920x1080" value="vjzual3-output-2017-10-17-30-hapq-3840x2160_DXV3-1920x1080"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="268.70577234612176198">
+						<ValueRange name="minMax" min="0" max="4833.3333333333330302"/>
+						<ValueRange name="startStop" min="0" max="4833.3333333333330302"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="96" value="96"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="96" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-30-hapq-3840x2160_DXV3-1920x1080.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1509069212805" layerIndex="1" columnIndex="31">
+			<PreloadData>
+				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-23-hapq-3840x2160_DXV3-1920x1080.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="vjzual3-output-2017-10-17-23-hapq-3840x2160_DXV3-1920x1080" value="vjzual3-output-2017-10-17-23-hapq-3840x2160_DXV3-1920x1080"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="1531.5250079799448031">
+						<ValueRange name="minMax" min="0" max="27366.666666666667879"/>
+						<ValueRange name="startStop" min="0" max="27366.666666666667879"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="96" value="96"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="96" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-23-hapq-3840x2160_DXV3-1920x1080.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1509069212803" layerIndex="0" columnIndex="32">
+			<PreloadData>
+				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-28-hapq-3840x2160_DXV3-1920x1080.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="vjzual3-output-2017-10-17-28-hapq-3840x2160_DXV3-1920x1080" value="vjzual3-output-2017-10-17-28-hapq-3840x2160_DXV3-1920x1080"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="1468.9726559836412889">
+						<ValueRange name="minMax" min="0" max="45200"/>
+						<ValueRange name="startStop" min="0" max="45200"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="96" value="96"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="96" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams">
+					<FoldState component="/groupedcomponent/videotrackinfocomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/" folded="0"/>
+				</FoldParams>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-28-hapq-3840x2160_DXV3-1920x1080.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1509069212680" layerIndex="1" columnIndex="32">
+			<PreloadData>
+				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-12-hapq-3840x2160_DXV3-1920x1080.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="vjzual3-output-2017-10-17-12-hapq-3840x2160_DXV3-1920x1080" value="vjzual3-output-2017-10-17-12-hapq-3840x2160_DXV3-1920x1080"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="1149.7491639039944857">
+						<ValueRange name="minMax" min="0" max="27333.333333333332121"/>
+						<ValueRange name="startStop" min="0" max="27333.333333333332121"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="64" value="64"/>
+									<ParamRange storage="3" name="BPM" default="140.48780487804879158" value="140.48780487804879158"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="64" detectedTempo="-1" manualTempo="140.48780487804879158" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-12-hapq-3840x2160_DXV3-1920x1080.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1507960429517" layerIndex="0" columnIndex="33">
 			<PreloadData>
 				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-07-24-hapq-3840x2160_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-07-24-hapq-3840x2160_DXV3-1920x1080.mov"/>
@@ -19146,7 +19435,67 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507784782907" layerIndex="0" columnIndex="30">
+		<Clip name="Clip" uniqueId="1509069212754" layerIndex="1" columnIndex="33">
+			<PreloadData>
+				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-3-hapq-3840x2160_DXV3-1920x1080.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="vjzual3-output-2017-10-17-3-hapq-3840x2160_DXV3-1920x1080" value="vjzual3-output-2017-10-17-3-hapq-3840x2160_DXV3-1920x1080"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="1516.6468742110303083">
+						<ValueRange name="minMax" min="0" max="39133.333333333335759"/>
+						<ValueRange name="startStop" min="0" max="39133.333333333335759"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="96" value="96"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="96" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams">
+					<FoldState component="/clipproperties/cuepoints/" folded="0"/>
+				</FoldParams>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-3-hapq-3840x2160_DXV3-1920x1080.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1507784782907" layerIndex="0" columnIndex="34">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-27-72_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19228,7 +19577,65 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429509" layerIndex="0" columnIndex="31">
+		<Clip name="Clip" uniqueId="1509069212684" layerIndex="1" columnIndex="34">
+			<PreloadData>
+				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-6-hapq-3840x2160_DXV3-1920x1080.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="vjzual3-output-2017-10-17-6-hapq-3840x2160_DXV3-1920x1080" value="vjzual3-output-2017-10-17-6-hapq-3840x2160_DXV3-1920x1080"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="3649.3215707924696289">
+						<ValueRange name="minMax" min="0" max="48900"/>
+						<ValueRange name="startStop" min="0" max="48900"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="96" value="96"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="96" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-6-hapq-3840x2160_DXV3-1920x1080.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1507960429509" layerIndex="0" columnIndex="35">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\storytime-output-2017-08-10-7_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19297,7 +19704,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507784782923" layerIndex="1" columnIndex="31">
+		<Clip name="Clip" uniqueId="1507784782923" layerIndex="1" columnIndex="35">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-07-03-65_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19307,7 +19714,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="6318.9774395264676059">
+					<ParamRange name="Position" default="0" value="62832.472237167508865">
 						<ValueRange name="minMax" min="0" max="111633.33333333332848"/>
 						<ValueRange name="startStop" min="0" max="111633.33333333332848"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -19381,7 +19788,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429511" layerIndex="0" columnIndex="32">
+		<Clip name="Clip" uniqueId="1507960429511" layerIndex="0" columnIndex="36">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\storytime-output-2017-08-10-16_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19439,7 +19846,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507784782913" layerIndex="1" columnIndex="32">
+		<Clip name="Clip" uniqueId="1507784782913" layerIndex="1" columnIndex="36">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-07-03-14_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19497,7 +19904,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429513" layerIndex="0" columnIndex="33">
+		<Clip name="Clip" uniqueId="1507960429513" layerIndex="0" columnIndex="37">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\storytime-output-2017-08-28-1_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19507,7 +19914,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="8832.4610031913689454">
+					<ParamRange name="Position" default="0" value="600.07165073750627471">
 						<ValueRange name="minMax" min="0" max="10033.33333333333394"/>
 						<ValueRange name="startStop" min="442.64705882352944855" max="10033.33333333333394"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -19557,7 +19964,11 @@
 							</Params>
 						</RenderPass>
 						<ChoosableMixer name="Mixer">
-							<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+							<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
+								<Params name="Params">
+									<ParamRange name="Opacity" default="1" value="0.95714285714285718409"/>
+								</Params>
+							</RenderPass>
 						</ChoosableMixer>
 					</RenderPass>
 					<RenderPass storage="0" name="InvertRGB" type="DryWetEffect" uniqueId="A105" baseType="DryWetEffect" index="2">
@@ -19572,7 +19983,11 @@
 							</Params>
 						</RenderPass>
 						<ChoosableMixer name="Mixer">
-							<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+							<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
+								<Params name="Params">
+									<ParamRange name="Opacity" default="1" value="0.60948905109489048826"/>
+								</Params>
+							</RenderPass>
 						</ChoosableMixer>
 					</RenderPass>
 					<RenderPass storage="0" name="Edge Detection" type="DryWetEffect" uniqueId="MEDG" baseType="DryWetEffect" index="3">
@@ -19586,7 +20001,11 @@
 							<Params name="Params">
 								<ParamChoice name="Blend Mode" default="67464115" value="67464211" storeChoices="0"/>
 							</Params>
-							<RenderPass name="Difference" type="Difference" uniqueId="A011" baseType="Mixer"/>
+							<RenderPass name="Difference" type="Difference" uniqueId="A011" baseType="Mixer">
+								<Params name="Params">
+									<ParamRange name="Opacity" default="1" value="0.31386861313868613665"/>
+								</Params>
+							</RenderPass>
 						</ChoosableMixer>
 					</RenderPass>
 				</RenderPass>
@@ -19599,7 +20018,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507784782903" layerIndex="1" columnIndex="33">
+		<Clip name="Clip" uniqueId="1507784782903" layerIndex="1" columnIndex="37">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-24-25_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19657,7 +20076,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429515" layerIndex="0" columnIndex="34">
+		<Clip name="Clip" uniqueId="1507960429515" layerIndex="0" columnIndex="38">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\storytime-output-2017-08-28-8_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19667,7 +20086,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="70578.837802065259893">
+					<ParamRange name="Position" default="0" value="3100.0061732565477541">
 						<ValueRange name="minMax" min="0" max="72433.333333333328483"/>
 						<ValueRange name="startStop" min="0" max="72433.333333333328483"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -19699,8 +20118,6 @@
 					<FoldState component="/groupedcomponent/renderpasschaincomponent/fisheye/mixerparamscomponent/" folded="0"/>
 					<FoldState component="/groupedcomponent/renderpasschaincomponent/lorez/" folded="0"/>
 					<FoldState component="/groupedcomponent/renderpasschaincomponent/lorez/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/noisy/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/noisy/mixerparamscomponent/" folded="0"/>
 				</FoldParams>
 			</ClipView>
 			<VideoTrack name="VideoTrack" manualDuration="0">
@@ -19760,7 +20177,11 @@
 							<Params name="Params">
 								<ParamChoice name="Blend Mode" default="67464115" value="67464114" storeChoices="0"/>
 							</Params>
-							<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+							<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
+								<Params name="Params">
+									<ParamRange name="Opacity" default="1" value="0.52737226277372262206"/>
+								</Params>
+							</RenderPass>
 						</ChoosableMixer>
 					</RenderPass>
 					<RenderPass storage="0" name="InvertRGB" type="DryWetEffect" uniqueId="A105" baseType="DryWetEffect" index="4">
@@ -19784,7 +20205,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429713" layerIndex="1" columnIndex="34">
+		<Clip name="Clip" uniqueId="1507960429713" layerIndex="1" columnIndex="38">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\storytime-output-2017-08-04-33_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19842,7 +20263,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507784782706" layerIndex="0" columnIndex="35">
+		<Clip name="Clip" uniqueId="1507784782706" layerIndex="0" columnIndex="39">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-27-44_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19900,7 +20321,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429721" layerIndex="1" columnIndex="35">
+		<Clip name="Clip" uniqueId="1507960429721" layerIndex="1" columnIndex="39">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\storytime-output-2017-08-05-84_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -19958,7 +20379,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429717" layerIndex="0" columnIndex="36">
+		<Clip name="Clip" uniqueId="1507960429717" layerIndex="0" columnIndex="40">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\storytime-output-2017-08-05-26_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -20016,7 +20437,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507784782808" layerIndex="1" columnIndex="36">
+		<Clip name="Clip" uniqueId="1507784782808" layerIndex="1" columnIndex="40">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-24-22_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -20103,7 +20524,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429719" layerIndex="0" columnIndex="37">
+		<Clip name="Clip" uniqueId="1507960429719" layerIndex="0" columnIndex="41">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\storytime-output-2017-08-05-42_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -20161,7 +20582,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429577" layerIndex="1" columnIndex="37">
+		<Clip name="Clip" uniqueId="1507960429577" layerIndex="1" columnIndex="41">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\storytime-output-2017-08-09-14_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -20219,7 +20640,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1507960429715" layerIndex="0" columnIndex="38">
+		<Clip name="Clip" uniqueId="1507960429715" layerIndex="0" columnIndex="42">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\storytime-output-2017-08-05-20_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -20278,7 +20699,7 @@
 			</VideoTrack>
 		</Clip>
 	</Deck>
-	<Deck name="Deck" uniqueId="1507694201278" numLayers="4" numColumns="8" closed="0" deckIndex="3">
+	<Deck name="Deck" uniqueId="1507694201278" numLayers="4" numColumns="10" closed="0" deckIndex="3">
 		<Params name="Params">
 			<Param name="Name" default="empty" value="halloween"/>
 		</Params>
