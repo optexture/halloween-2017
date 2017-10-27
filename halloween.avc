@@ -19,7 +19,9 @@
 		<ParamRange name="Link 1" altName="R delay" default="0" value="0"/>
 	</Params>
 	<CompositionView name="CompositionObjectView">
-		<FoldParams name="FoldParams"/>
+		<FoldParams name="FoldParams">
+			<FoldState component="/groupedcomponent/renderpasschaincomponent/bright.contrast/" folded="0"/>
+		</FoldParams>
 	</CompositionView>
 	<AudioTrack name="AudioTrack">
 		<AudioEffectChain name="AudioEffectChain"/>
@@ -30,26 +32,7 @@
 			<ParamRange storage="3" name="Height" default="1080" value="1080"/>
 		</Params>
 		<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
-			<RenderPass storage="0" name="MetaShape" type="DryWetEffect" uniqueId="844752394952286288" baseType="DryWetEffect" index="0">
-				<Params name="Params">
-					<Param name="Bypassed" default="0" value="1"/>
-				</Params>
-				<View name="View" folded="1"/>
-				<RenderPass name="MetaShape" type="MetaShape" uniqueId="844752394952286288" baseType="Effect" dwType="Effect">
-					<Params name="Params">
-						<ParamChoice name="Shape 1" default="1" value="0" storeChoices="0"/>
-						<ParamChoice name="Shape 2" default="3" value="1" storeChoices="0"/>
-						<ParamChoice name="Color" default="2" value="3" storeChoices="0"/>
-						<Param name="Scale" default="0" value="1"/>
-						<Param name="Invert" default="0" value="1"/>
-						<ParamRange name="Margin" default="0.125" value="0.024726925328636645968"/>
-					</Params>
-				</RenderPass>
-				<ChoosableMixer name="Mixer">
-					<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
-				</ChoosableMixer>
-			</RenderPass>
-			<RenderPass storage="0" name="Ripples" type="DryWetEffect" uniqueId="sy05" baseType="DryWetEffect" index="1">
+			<RenderPass storage="0" name="Ripples" type="DryWetEffect" uniqueId="sy05" baseType="DryWetEffect" index="0">
 				<Params name="Params">
 					<Param name="Bypassed" default="0" value="1"/>
 				</Params>
@@ -73,7 +56,7 @@
 						<ParamRange name="Frequency V" default="0.20000000298023223877" value="0.19799483449835525439"/>
 						<ParamRange name="Amplitude V" default="0.5" value="0.37092716532542291397"/>
 						<ParamRange name="Amplitude Both" default="1" value="0.41353383458646614246"/>
-						<ParamRange name="Phase" default="0" value="0.52820652109651677897">
+						<ParamRange name="Phase" default="0" value="0.077629866022441054718">
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="0">
 									<Params name="Params">
@@ -91,7 +74,7 @@
 					<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 				</ChoosableMixer>
 			</RenderPass>
-			<RenderPass storage="0" name="Suckr" type="DryWetEffect" uniqueId="A126" baseType="DryWetEffect" index="2">
+			<RenderPass storage="0" name="Suckr" type="DryWetEffect" uniqueId="A126" baseType="DryWetEffect" index="1">
 				<Params name="Params">
 					<Param name="Bypassed" default="0" value="1"/>
 				</Params>
@@ -103,7 +86,7 @@
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceFFT name="PhaseSourceFFT" pathToLink="/audioengine/externalfft">
 									<Params name="Params">
-										<ParamRange name="Gain" default="0" value="-48"/>
+										<ParamRange name="Gain" default="0" value="18.090452261306523951"/>
 									</Params>
 								</PhaseSourceFFT>
 							</BehaviourDouble>
@@ -114,7 +97,7 @@
 					<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 				</ChoosableMixer>
 			</RenderPass>
-			<RenderPass storage="0" name="Trails" type="DryWetEffect" uniqueId="A111" baseType="DryWetEffect" index="3">
+			<RenderPass storage="0" name="Trails" type="DryWetEffect" uniqueId="A111" baseType="DryWetEffect" index="2">
 				<Params name="Params">
 					<Param name="Bypassed" default="0" value="1"/>
 				</Params>
@@ -129,7 +112,7 @@
 					<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 				</ChoosableMixer>
 			</RenderPass>
-			<RenderPass storage="0" name="Tint" type="DryWetEffect" uniqueId="A179" baseType="DryWetEffect" index="4">
+			<RenderPass storage="0" name="Tint" type="DryWetEffect" uniqueId="A179" baseType="DryWetEffect" index="3">
 				<Params name="Params">
 					<Param name="Bypassed" default="0" value="1"/>
 					<ParamRange name="Opacity" default="1" value="0.64173228346456701043"/>
@@ -158,7 +141,7 @@
 					<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 				</ChoosableMixer>
 			</RenderPass>
-			<RenderPass storage="0" name="DelayRGB" type="DryWetEffect" uniqueId="A152" baseType="DryWetEffect" index="5">
+			<RenderPass storage="0" name="DelayRGB" type="DryWetEffect" uniqueId="A152" baseType="DryWetEffect" index="4">
 				<Params name="Params">
 					<Param name="Bypassed" default="0" value="1"/>
 					<ParamRange name="Opacity" default="1" value="0.66165413533834582793"/>
@@ -206,7 +189,7 @@
 					<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 				</ChoosableMixer>
 			</RenderPass>
-			<RenderPass storage="0" name="InfiniteZoom" type="DryWetEffect" uniqueId="P205" baseType="DryWetEffect" index="6">
+			<RenderPass storage="0" name="InfiniteZoom" type="DryWetEffect" uniqueId="P205" baseType="DryWetEffect" index="5">
 				<Params name="Params">
 					<Param name="Bypassed" default="0" value="1"/>
 				</Params>
@@ -231,10 +214,10 @@
 					<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 				</ChoosableMixer>
 			</RenderPass>
-			<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="7">
+			<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="6">
 				<View name="View" folded="1" bCanBeDisabled="0" bCanBeRemoved="0"/>
 			</RenderPass>
-			<RenderPass storage="0" name="HueRotate" type="DryWetEffect" uniqueId="A128" baseType="DryWetEffect" index="8">
+			<RenderPass storage="0" name="HueRotate" type="DryWetEffect" uniqueId="A128" baseType="DryWetEffect" index="7">
 				<Params name="Params">
 					<Param name="Bypassed" default="0" value="1"/>
 				</Params>
@@ -248,11 +231,7 @@
 					<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 				</ChoosableMixer>
 			</RenderPass>
-			<RenderPass storage="0" name="BrightnessContrast" type="DryWetEffect" uniqueId="A102" baseType="DryWetEffect" index="9">
-				<Params name="Params">
-					<Param name="Bypassed" default="0" value="1"/>
-				</Params>
-				<View name="View" folded="1"/>
+			<RenderPass storage="0" name="BrightnessContrast" type="DryWetEffect" uniqueId="A102" baseType="DryWetEffect" index="8">
 				<RenderPass name="BrightnessContrast" type="BrightnessContrast" uniqueId="A102" baseType="Effect" dwType="Effect">
 					<Params name="Params">
 						<ParamRange name="Brightness" default="0" value="0.083123425692695152023"/>
@@ -263,7 +242,7 @@
 					<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 				</ChoosableMixer>
 			</RenderPass>
-			<RenderPass storage="0" name="Levels" type="DryWetEffect" uniqueId="A141" baseType="DryWetEffect" index="10">
+			<RenderPass storage="0" name="Levels" type="DryWetEffect" uniqueId="A141" baseType="DryWetEffect" index="9">
 				<Params name="Params">
 					<Param name="Bypassed" default="0" value="1"/>
 				</Params>
@@ -287,6 +266,8 @@
 			<FoldParams name="FoldParams">
 				<FoldState component="/groupedcomponent/groupedcomponent/audio/" folded="1"/>
 				<FoldState component="/groupedcomponent/groupedcomponent/audioeffects/" folded="0"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
+				<FoldState component="/groupedcomponent/video/" folded="1"/>
 			</FoldParams>
 		</LayerGroupView>
 		<AudioTrack name="AudioTrack">
@@ -299,27 +280,7 @@
 			</Params>
 			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
 				<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
-					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
-				</RenderPass>
-				<RenderPass storage="0" name="DropShadow" type="DryWetEffect" uniqueId="372541077550622327" baseType="DryWetEffect" index="1">
-					<Params name="Params">
-						<Param name="Bypassed" default="0" value="1"/>
-					</Params>
-					<View name="View" folded="1"/>
-					<RenderPass name="DropShadow" type="DropShadow" uniqueId="372541077550622327" baseType="Effect" dwType="Effect">
-						<Params name="Params">
-							<ParamRange name="Distance" default="10" value="22.047282541830707459">
-								<ValueRange name="minMax" min="0" max="480"/>
-								<ValueRange name="startStop" min="0" max="100"/>
-							</ParamRange>
-							<ParamColor name="Color" channelmode="2" paletteEnabled="0" color="4278190080"/>
-							<ParamRange name="Spread" default="0.001250000000000000026" value="0.00034776942936454223552"/>
-							<ParamRange name="Strength" default="8" value="19.917322834645670326"/>
-						</Params>
-					</RenderPass>
-					<ChoosableMixer name="Mixer">
-						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
-					</ChoosableMixer>
+					<View name="View" folded="1" bCanBeDisabled="0" bCanBeRemoved="0"/>
 				</RenderPass>
 			</RenderPass>
 			<ChoosableMixer name="Blend">
@@ -354,7 +315,7 @@
 				<RenderPass storage="0" name="Edge Detection" type="DryWetEffect" uniqueId="MEDG" baseType="DryWetEffect" index="1">
 					<Params name="Params">
 						<Param name="Bypassed" default="0" value="1"/>
-						<ParamRange name="Opacity" default="1" value="0"/>
+						<ParamRange name="Opacity" default="1" value="0.299212598425196874"/>
 					</Params>
 					<RenderPass name="Edge Detection" type="FFGLEffect" uniqueId="MEDG" baseType="Effect" dwType="Effect">
 						<Params name="Params">
@@ -367,12 +328,15 @@
 						<Params name="Params">
 							<ParamChoice name="Blend Mode" default="67464115" value="67464114" storeChoices="0"/>
 						</Params>
-						<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+						<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
+							<Params name="Params">
+								<ParamRange name="Opacity" default="1" value="0.99212598425196851792"/>
+							</Params>
+						</RenderPass>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Edge Detection" type="DryWetEffect" uniqueId="MEDG" baseType="DryWetEffect" index="2">
 					<Params name="Params">
-						<Param name="Bypassed" default="0" value="1"/>
 						<ParamRange name="Opacity" default="1" value="0.5"/>
 					</Params>
 					<RenderPass name="Edge Detection" type="FFGLEffect" uniqueId="MEDG" baseType="Effect" dwType="Effect">
@@ -385,7 +349,11 @@
 						<Params name="Params">
 							<ParamChoice name="Blend Mode" default="67464115" value="67464211" storeChoices="0"/>
 						</Params>
-						<RenderPass name="Difference" type="Difference" uniqueId="A011" baseType="Mixer"/>
+						<RenderPass name="Difference" type="Difference" uniqueId="A011" baseType="Mixer">
+							<Params name="Params">
+								<ParamRange name="Opacity" default="1" value="0.5"/>
+							</Params>
+						</RenderPass>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Mirror" type="DryWetEffect" uniqueId="A108" baseType="DryWetEffect" index="3">
@@ -442,6 +410,7 @@
 		</AudioTrack>
 		<VideoTrack name="VideoTrack">
 			<Params name="Params">
+				<ParamRange name="Opacity" default="1" value="0.83464566929133854334"/>
 				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
 				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
 			</Params>
@@ -452,7 +421,7 @@
 				<RenderPass storage="0" name="Edge Detection" type="DryWetEffect" uniqueId="MEDG" baseType="DryWetEffect" index="1">
 					<Params name="Params">
 						<Param name="Bypassed" default="0" value="1"/>
-						<ParamRange name="Opacity" default="1" value="0"/>
+						<ParamRange name="Opacity" default="1" value="0.299212598425196874"/>
 					</Params>
 					<RenderPass name="Edge Detection" type="FFGLEffect" uniqueId="MEDG" baseType="Effect" dwType="Effect">
 						<Params name="Params">
@@ -465,12 +434,15 @@
 						<Params name="Params">
 							<ParamChoice name="Blend Mode" default="67464115" value="67464114" storeChoices="0"/>
 						</Params>
-						<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+						<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
+							<Params name="Params">
+								<ParamRange name="Opacity" default="1" value="0.99212598425196851792"/>
+							</Params>
+						</RenderPass>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Edge Detection" type="DryWetEffect" uniqueId="MEDG" baseType="DryWetEffect" index="2">
 					<Params name="Params">
-						<Param name="Bypassed" default="0" value="1"/>
 						<ParamRange name="Opacity" default="1" value="0.49916268353486181741"/>
 					</Params>
 					<RenderPass name="Edge Detection" type="FFGLEffect" uniqueId="MEDG" baseType="Effect" dwType="Effect">
@@ -483,7 +455,11 @@
 						<Params name="Params">
 							<ParamChoice name="Blend Mode" default="67464115" value="67464211" storeChoices="0"/>
 						</Params>
-						<RenderPass name="Difference" type="Difference" uniqueId="A011" baseType="Mixer"/>
+						<RenderPass name="Difference" type="Difference" uniqueId="A011" baseType="Mixer">
+							<Params name="Params">
+								<ParamRange name="Opacity" default="1" value="0.49916268353486181741"/>
+							</Params>
+						</RenderPass>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Mirror" type="DryWetEffect" uniqueId="A108" baseType="DryWetEffect" index="3">
@@ -508,12 +484,16 @@
 				<Params name="Params">
 					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
 				</Params>
-				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
+					<Params name="Params">
+						<ParamRange name="Opacity" default="1" value="0.83464568853378295898"/>
+					</Params>
+				</RenderPass>
 			</ChoosableMixer>
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
 					<Params name="Params">
-						<ParamRange name="Opacity" default="1" value="0.99365508556365966797"/>
+						<ParamRange name="Opacity" default="1" value="0.99670320749282836914"/>
 					</Params>
 				</RenderPass>
 			</ChoosableMixer>
@@ -528,7 +508,13 @@
 		<ClipTransition name="ClipTransition"/>
 		<LayerView name="LayerView">
 			<FoldParams name="FoldParams">
+				<FoldState component="/groupedcomponent/common/" folded="1"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/bright.contrast/" folded="1"/>
 				<FoldState component="/groupedcomponent/renderpasschaincomponent/goo/speed/parambasecomponent/parambasecomponent/" folded="0"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/threshold/" folded="1"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
+				<FoldState component="/groupedcomponent/transition/" folded="1"/>
+				<FoldState component="/groupedcomponent/video/" folded="1"/>
 			</FoldParams>
 		</LayerView>
 		<AudioTrack name="AudioTrack">
@@ -536,7 +522,7 @@
 		</AudioTrack>
 		<VideoTrack name="VideoTrack">
 			<Params name="Params">
-				<ParamRange name="Opacity" default="0.5" value="0"/>
+				<ParamRange name="Opacity" default="0.5" value="0.97637795275590555377"/>
 				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
 				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
 			</Params>
@@ -548,6 +534,7 @@
 					<Params name="Params">
 						<Param name="Bypassed" default="0" value="1"/>
 					</Params>
+					<View name="View" folded="1"/>
 					<RenderPass name="BrightnessContrast" type="BrightnessContrast" uniqueId="A102" baseType="Effect" dwType="Effect">
 						<Params name="Params">
 							<ParamRange name="Brightness" default="0" value="-0.047244094488189003478"/>
@@ -562,6 +549,7 @@
 					<Params name="Params">
 						<ParamRange name="Opacity" default="1" value="0.18766412209338090289"/>
 					</Params>
+					<View name="View" folded="1"/>
 					<RenderPass name="Threshold" type="Threshold" uniqueId="A106" baseType="Effect" dwType="Effect">
 						<Params name="Params">
 							<ParamRange name="Threshold" default="0.5" value="0.59711294099101874799"/>
@@ -570,7 +558,11 @@
 						</Params>
 					</RenderPass>
 					<ChoosableMixer name="Mixer">
-						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
+							<Params name="Params">
+								<ParamRange name="Opacity" default="1" value="0.18766412209338090289"/>
+							</Params>
+						</RenderPass>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Goo" type="DryWetEffect" uniqueId="sy06" baseType="DryWetEffect" index="3">
@@ -624,7 +616,11 @@
 						</Params>
 					</RenderPass>
 					<ChoosableMixer name="Mixer">
-						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
+							<Params name="Params">
+								<ParamRange name="Opacity" default="1" value="0.60598503740648379523"/>
+							</Params>
+						</RenderPass>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Trails" type="DryWetEffect" uniqueId="A111" baseType="DryWetEffect" index="5">
@@ -645,7 +641,11 @@
 				<Params name="Params">
 					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
 				</Params>
-				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
+					<Params name="Params">
+						<ParamRange name="Opacity" default="1" value="0.97637796401977539063"/>
+					</Params>
+				</RenderPass>
 			</ChoosableMixer>
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
@@ -820,7 +820,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="2252.2609186926856637">
+						<ParamRange name="Position" default="0" value="4112.9583094529743903">
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 									<Params name="Params">
@@ -884,7 +884,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="3685.9394141793727613">
+						<ParamRange name="Position" default="0" value="4159.6970686153390488">
 							<BehaviourDouble name="BehaviourDouble">
 								<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 									<Params name="Params">
@@ -907,10 +907,12 @@
 				<ClipView name="ClipView">
 					<FoldParams name="FoldParams">
 						<FoldState component="/groupedcomponent/renderpasschaincomponent/colorize/color/paramcolorcomponent/" folded="0"/>
+						<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/" folded="1"/>
 						<FoldState component="/groupedcomponent/renderpasschaincomponent/tint/" folded="0"/>
 						<FoldState component="/groupedcomponent/renderpasschaincomponent/tint/blackto/paramcolorcomponent/" folded="0"/>
 						<FoldState component="/groupedcomponent/renderpasschaincomponent/tint/mixerparamscomponent/" folded="0"/>
 						<FoldState component="/groupedcomponent/renderpasschaincomponent/tint/whiteto/paramcolorcomponent/" folded="0"/>
+						<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
 						<FoldState component="/groupedcomponent/videotrackinfocomponent/" folded="0"/>
 						<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/" folded="0"/>
 					</FoldParams>
@@ -926,12 +928,14 @@
 					</Params>
 					<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
 						<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
-							<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+							<View name="View" folded="1" bCanBeDisabled="0" bCanBeRemoved="0"/>
 						</RenderPass>
 						<RenderPass storage="0" name="Edge Detection" type="DryWetEffect" uniqueId="MEDG" baseType="DryWetEffect" index="1">
 							<Params name="Params">
+								<Param name="Bypassed" default="0" value="1"/>
 								<ParamRange name="Opacity" default="1" value="0.94379092945772058432"/>
 							</Params>
+							<View name="View" folded="1"/>
 							<RenderPass name="Edge Detection" type="FFGLEffect" uniqueId="MEDG" baseType="Effect" dwType="Effect">
 								<Params name="Params">
 									<ParamRange name="Mode" default="1" value="0.0143791647518382356"/>
@@ -18998,7 +19002,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="5423.7980834595955457">
+					<ParamRange name="Position" default="0" value="2734.9498101478088756">
 						<ValueRange name="minMax" min="0" max="20900"/>
 						<ValueRange name="startStop" min="0" max="20900"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -19587,7 +19591,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="3649.3215707924696289">
+					<ParamRange name="Position" default="0" value="48284.117293050978333">
 						<ValueRange name="minMax" min="0" max="48900"/>
 						<ValueRange name="startStop" min="0" max="48900"/>
 						<BehaviourDouble name="BehaviourDouble">
